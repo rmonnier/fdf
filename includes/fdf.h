@@ -6,7 +6,7 @@
 /*   By: rmonnier <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/09 15:24:41 by rmonnier          #+#    #+#             */
-/*   Updated: 2017/01/04 17:45:20 by rmonnier         ###   ########.fr       */
+/*   Updated: 2017/01/05 12:06:05 by rmonnier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,7 +83,7 @@ enum
 };
 
 int				fdf_error(int param, char *name);
-int	local_endian(void);
+int				local_endian(void);
 t_point			*parse_map(int fd);
 int				connect_dots(t_point *grid);
 int				display_map(t_point *grid);
