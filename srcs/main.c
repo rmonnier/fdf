@@ -19,7 +19,7 @@ int	main(int ac, char **av)
 
 	if (ac != 2)
 		return (fdf_error(USAGE, NULL));
-	if ((fd = open(av[1], O_RDONLY)) < 0)
+	if ((fd = open(av[1], O_RDONLY)) < 0) 
 		return (fdf_error(OPEN_ERROR, av[1]));
 	grid = parse_map(fd);
 	display_map(grid);

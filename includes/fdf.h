@@ -25,6 +25,7 @@
 # define RATIO_X 20
 # define RATIO_Y 20
 # define RATIO_Z 2
+# define PAD 20
 
 typedef struct	s_linker
 {
