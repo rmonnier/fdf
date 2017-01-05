@@ -20,7 +20,7 @@ static int	my_key_funct(int keycode, void *param)
 	return (1);
 }
 
-static int	get_size(t_point *grid, t_display *params)
+static int	get_2d_projection(t_point *grid, t_display *params)
 {
 	t_point	*line;
 
@@ -74,7 +74,7 @@ int			display_map(t_point *grid)
 	params.height = HEIGHT;
 	params.ratio_x = RATIO_X;
 	params.ratio_y = RATIO_Y;
-	get_size(grid, &params);
+	get_2d_projection(grid, &params);
 	resize(grid, &params);
 	params.win = mlx_new_window(params.mlx, params.width + 2 * PAD,
 													params.height + 2 * PAD, "fdf");
