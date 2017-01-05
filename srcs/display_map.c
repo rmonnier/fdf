@@ -6,7 +6,7 @@
 /*   By: rmonnier <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/05 11:25:08 by rmonnier          #+#    #+#             */
-/*   Updated: 2017/01/05 11:25:10 by rmonnier         ###   ########.fr       */
+/*   Updated: 2017/01/05 11:40:18 by rmonnier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,7 +77,7 @@ int			display_map(t_point *grid)
 	get_2d_projection(grid, &params);
 	resize(grid, &params);
 	params.win = mlx_new_window(params.mlx, params.width + 2 * PAD,
-													params.height + 2 * PAD, "fdf");
+								params.height + 2 * PAD, "fdf");
 	params.img = mlx_new_image(params.mlx, params.width, params.height);
 	draw_image(grid, params);
 	mlx_put_image_to_window(params.mlx, params.win, params.img, PAD, PAD);
