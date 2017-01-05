@@ -11,13 +11,14 @@
 # **************************************************************************** #
 
 NAME			=		fdf
-SRCS_NAME		=		main.c\
-						fdf_error.c\
-						parse_map.c\
-						connect_dots.c\
+SRCS_NAME		=	connect_dots.c\
 						compute_screen_view.c\
 						draw_image.c\
-						display_map.c
+						display_map.c\
+						fdf_error.c\
+						local_endian.c\
+						main.c\
+						parse_map.c
 SRCS_PATH		=		srcs/
 SRCS			=		$(addprefix $(SRCS_PATH), $(SRCS_NAME))
 OBJ_NAME		=		$(SRCS_NAME:.c=.o)

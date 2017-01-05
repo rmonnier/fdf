@@ -6,7 +6,7 @@
 /*   By: rmonnier <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/05 11:25:18 by rmonnier          #+#    #+#             */
-/*   Updated: 2017/01/05 11:25:19 by rmonnier         ###   ########.fr       */
+/*   Updated: 2017/01/05 12:01:33 by rmonnier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,14 +25,10 @@ static int	put_pixel(t_display params, int x, int y)
 	u = mlx_get_color_value(params.mlx, 0X00FFFFFF);
 	while (i < params.sizecol)
 	{
-		if (!params.endian)
-		{
+		if (params.endian == params.local_endian)
 			params.data[index + i] = *(((char*)&u) + i);
-		}
 		else
-		{
 			params.data[index + i] = *(((char*)&u) + params.sizecol - i - 1);
-		}
 		i++;
 	}
 	return (0);
@@ -81,6 +77,7 @@ int			draw_image(t_point *grid, t_display params)
 	params.data = mlx_get_data_addr(params.img, &(params.bpp),
 										&(params.sizeline), &(params.endian));
 	params.sizecol = params.bpp / 8;
+	params.local_endian = local_endian();
 	while (grid)
 	{
 		line = grid;

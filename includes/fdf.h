@@ -50,6 +50,7 @@ typedef struct	s_display
 	int			sizeline;
 	int			sizecol;
 	int			endian;
+	int			local_endian;
 	int			xmin;
 	int			xmax;
 	int			ymin;
@@ -82,7 +83,7 @@ enum
 };
 
 int				fdf_error(int param, char *name);
-int				fdf(void);
+int	local_endian(void);
 t_point			*parse_map(int fd);
 int				connect_dots(t_point *grid);
 int				display_map(t_point *grid);
