@@ -6,7 +6,7 @@
 #    By: rmonnier <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/03 10:17:46 by rmonnier          #+#    #+#              #
-#    Updated: 2017/01/04 18:04:58 by rmonnier         ###   ########.fr        #
+#    Updated: 2017/02/03 14:41:19 by rmonnier         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,7 +35,7 @@ LIB				=		-Lminilibx -lmlx -framework OpenGL -framework AppKit \
 $(NAME): $(OBJ)
 	make -C libft/
 	make -C minilibx/
-	gcc $(FLAGS) -o $(NAME) $(SRCS) $(INC) $(LIB)
+	gcc $(FLAGS) -o $(NAME) $(OBJ) $(INC) $(LIB)
 
 all: $(NAME)
 
